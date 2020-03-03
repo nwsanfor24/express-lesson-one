@@ -10,13 +10,24 @@ const server = http.createServer(handleRequest);
 //Function which handles incoming requests and sends responses
 function handleRequest(req, res) {
 
-    fs.readFile(__dirname + "/index.html", function(err, data) {
-        if (err) throw err;
+    const path = req.url;
 
-        res.writeHead(200, {"Content-Type": "text/html"});
-        res.end(data);
-    });
+    switch (path) {
+
+        case "/index.html":
+
+        case "/movies.html":           
+
+        case "/foods.html":
+
+        case "/css-frameworks.html":
+            
+        default:
+            return display404(path, res);
+    }
 }
+
+
 
 //Start our server
 server.listen(PORT, function() {

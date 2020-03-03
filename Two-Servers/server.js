@@ -1,4 +1,5 @@
 const http = require("http");
+const http2 = require("http");
 
 //Server 1
 var PORT1 = 7000;
@@ -20,7 +21,7 @@ function anotherRequest(request, response) {
     response.end("All who wander are not lost" + request.url);
 }
 
-const anotherServer = http.createServer(anotherRequest);
+const anotherServer = http2.createServer(anotherRequest);
 
 anotherServer.listen(PORT2, function() {
     console.log("Server listening on: http://localhost:" + PORT2);

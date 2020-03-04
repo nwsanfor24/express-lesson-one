@@ -7,19 +7,19 @@
 </head>
 
 <body>
-    <div class="jumbotron">
-        <h1 class="text-center">My Favorite Things</h1>
-    </div>
-    <div class="container">
-        <div class="col-sm-6 col-sm-offset-3">
-            <h2>This is the home page! Click on an item and go to that page</h2>
-            <ul>
-                <li>Movies</li>
-                <li>Food</li>
-                <li>CSS Frameworks</li>
-            </ul>
+    <form action="http:localhost:9000/thanks" method="POST">
+        <div>
+            <label for="say">What greeting do you want to say?</label>
+            <input name="say" id="say" value="Hi">
         </div>
-    </div>
+        <div>
+            <label for="to">Who do you want to say it to?</label>
+            <input name="to" id="to" value="Mom">
+        </div>
+        <div>
+            <button>Send my greetings</button>
+        </div>
+    </form>
 </body>
 
 </html>
